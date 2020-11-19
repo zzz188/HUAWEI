@@ -1,0 +1,75 @@
+/*****初始化*****/
+*{
+    padding:0px;
+    margin: 0px;
+}
+.clear:after{
+    /**设置添加的子元素的内容为空**/
+    content: "";
+    /**设置添加的子元素为块级元素**/
+    display: block;
+    /**设置添加的子元素高度为0**/
+    height: 0;
+    /**设置添加的子元素看不见**/
+    visibility: hidden;
+    /**给添加的子元素设置clear：both；**/
+    clear: both;
+}
+body{
+    min-width: 1000px;
+    background-color: #ffffff;
+}
+a{
+    text-decoration: none;
+    color: #3A3A3A;
+    font-size: 14px;
+    cursor: pointer;
+}
+ul,li{
+    list-style: none;
+    float: left;
+    
+}
+input,button{
+    border: 0;
+    outline: 0;
+    background: none;
+}
+.innder{
+    margin: auto;
+    width: 1190px;
+    /* border: solid 1px #000000; */
+}
+
+/****头部****/
+.hd-top{
+    padding-bottom:18px ;
+    padding-top: 18px;
+}
+
+.z-left{
+    padding-right: 64px;
+    float: left;
+}
+
+.z-left img{
+    height: 36px;
+    float: left;
+}
+
+.hd-top em{
+    width: 1px;
+    height: 18px;
+    float: left;
+    margin:9px 8px 9px 8px;
+    background-color: #030000;
+    font-style: italic;
+}
+
+
+.hd-middle{
+    width: 999999px;
+    /* clear: both; */
+    overflow: hidden;
+    /* border: solid 1px #000000; */
+}
