@@ -1,0 +1,167 @@
+/********城市*******/
+.buy-buy{
+    position: relative;
+}
+.buy-a .buy-a-one{
+    display: block;
+    top: 5px ;
+    left: 360px;
+    position: absolute;
+    width: 430px;
+    height: 260px;
+    /* background: red ; */
+}
+.buy-a .buy-a-two{
+    display: block;
+    top: 0;
+    position: absolute;
+    width: 372px;
+    height: 126px;
+    /* background: red ; */
+}
+
+.buy-a .a-two-one{
+    left: 800px;
+}
+.buy-a  .a-two-two{
+    left: 1185px;
+}
+.buy-a .a-two-three{
+    top: 140px;
+    left: 800px;
+}
+.buy-a .a-two-four{
+    top: 140px;
+    left: 1185px;
+}
+
+
+/********meta家族********/
+
+.mate-buy{
+    position: relative;
+}
+
+.mate-a .mate-a-one{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 360px;
+    width: 470px;
+    height: 322px;
+    /* background: red; */
+}
+.mate-a .mate-a-two{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 832px;
+    width: 386px;
+    height: 322px;
+    /* background: red; */
+}
+.mate-a .mate-a-three{
+    display: block;
+    position: absolute;
+    width: 336px;
+    height: 160px;
+    /* background: red; */
+}
+.mate-buy .mate-a  .a-three-one{
+    top: 0;
+    left: 1220px;
+}
+.mate-buy .mate-a  .a-three-two{
+    top: 161px;
+    left: 1220px;
+}
+
+/**mate列表**/
+.mate-list-type{
+    /* border: solid 1px red; */
+    float: right;
+    background-color: #ffffff;
+    text-align: center;
+}
+.mate-list-type:first-of-type~.mate-list-type{
+    margin-right: 10px;
+}
+.mate-list-type .type-img{
+    background-color: #EBEEF3;
+    width: 290px;
+}
+.mate-list-type h3{
+    margin: 20px 0 10px 0;
+}
+.mate-list-type .type-rmb{
+    width: 130px;
+    font-size: 20px;
+    display: inline-block;
+    margin: 20px 0 20px 0;
+    padding: 5px 5px 5px 5px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+}
+.mate-list-type .type-rmb img{
+    display: inline-block;
+    vertical-align: middle;
+    width: 15px;
+    margin-right: 3px;
+}
+.mate-list-type .type-introduce  .type-introduce-one {
+    position: absolute;
+    background-color: #FF9C1A;
+    top: 263px;
+    color: white;
+    border-radius: 20px 20px 20px 0;
+    padding: 3px 15px 3px 15px ;
+}
+
+/**mate扩展列表**/
+.mate-extend{
+    width: 1210px;
+    margin-top:10px;
+    height: 300px;
+}
+.mate-extend-type{
+    /* border: solid 1px red; */
+    float: right;
+    width: 238px;
+    background-color: #ffffff;
+    text-align: center;
+    border:solid 1px #a0a0a0;
+}
+.mate-extend-type:first-of-type~.mate-extend-type{
+    margin-right: 10px;
+}
+.mate-extend-type .type-img{
+    /* background-color: #EBEEF3; */
+    width: 120px;
+    margin-top: 15px;
+}
+.mate-extend-type span{
+    color: #9e9e9e;
+    font-size: 12px;
+}
+.mate-extend-type h4{
+    color:#2c2c2c;
+    margin: 15px 0 5px 0;
+}
+.mate-extend-type .type-rmb{
+    width: 130px;
+    font-size: 10px;
+    margin: 15px 0 15px 0;
+    display: inline-block;
+}
+.mate-extend-type .type-rmb img{
+    display: inline-block;
+    vertical-align: middle;
+    width: 9px;
+}
+.mate-extend-type:hover{
+    margin-top: -1px;
+    box-shadow: 0 4px 3px 1px #b9b9b9;
+}
+
+
