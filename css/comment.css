@@ -48,6 +48,16 @@ input,button{
 .position{
     position: relative;
 }
+.host{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.guest{
+    position: absolute;
+    left: 50%;
+    margin-left: -960px;
+}
 @keyframes show{
     from{height: 0;display: block;}
     to{height: 100%;display: block;}
