@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+</head>
+<style>
+    /* .fade-enter {
+        transform: translateX(1920px);
+        opacity: 1;
+    }
+
+    .fade-enter-active{
+       
+    }
+    .fade-enter-active,
+    .fade-leave-active {
+        transition: all 3s ease-out;
+    }
+
+    .fade-leave-active {
+        transform: translateX(-1920px);
+    } */
+</style>
+
+<body>
+    <div id="app"  >
+        <div id="cs" ref="z">
+            <img :style="s" v-for="(item,index) in viewpagerList" :key="index" :src="item"
+            style="float:left;margin: 0;" alt="华为超级品牌日-Mate力城市旅行记" @mouseenter="clearGo" @mouseleave="go">
+        </div>
+            
+        <ul style="list-style: none;position: absolute;top: 500px;">
+            <li v-for="(v,i) in viewpagerList" :key="i" style="height: 20px; width: 20px; float: left;background-color: black; border:solid 1px black; border-radius: 50%;margin-right: 20px;"  @mouseenter="clearLiGo(i)"></li>
+        </ul>
+
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                msg: 'sdf',
+                viewpagerList: [
+                    "../images/20cbe424-1dae-4e83-814d-7fd90fef923e.jpg",
+                    "../images/2fe5886e-1011-4c92-b398-f3d1ac007b02.jpg",
+                    "../images/12e034cf-85e8-4828-b9c0-b74845c791b6.jpg",
+                    "../images/873ac070-4554-4f38-b9ee-8d7f39abcbc5.jpg",
+                    "../images/fdc065f5-0e66-48d9-ab15-4c9075aa83d4.jpg",
+                    "../images/c543d6c0-7e2b-4622-b06f-9dbfcffcccf1.jpg"
+                ],
+                n: 0,
+                // width:{width:'6000px'},
+                s:null,
+                l:[
+                { transform:'translateX(0px)',transition:'all 3s ease-out'},
+                { transform:'translateX(-1920px)',transition:'all 3s ease-out'},
+                { transform:'translateX(-3840px)',transition:'all 3s ease-out'},
+                { transform:'translateX(-5760px)',transition:'all 3s ease-out'},
+                { transform:'translateX(-7680px)',transition:'all 3s ease-out'},
+                { transform:'translateX(-9600px)',transition:'all 3s ease-out'},
+                ],
+                viewpagerInder: null
+            },
+            methods: {
+                go() {
+                    this.viewpagerInder = setInterval(() => {
+                      this.s = this.l[this.n],
+                     this.n++
+                      if(this.n>=this.l.length){
+                          this.n=0
+                      }
+                    }, 5000);
+                },
+                clearGo() {
+                    clearInterval(this.viewpagerInder)
+                },
+                clearLiGo(i){
+                    this.n=i,
+                    this.s = this.l[i],
+                     this.n++
+                      if(this.n>=this.l.length){
+                          this.n=0
+                      }
+                    clearInterval(this.viewpagerInder)
+                }
+            },
+            // computed: {
+            //     // kuang (){
+            //     //     // this.width = this.viewpagerList,length * 1920
+            //     //     // this.$refs.z.style.width = this.width
+            //     //     document.getElementById(cs).wid = '6000px'
+            //     // }
+                
+            // },
+            mounted() {
+                this.$refs.z.style.width = this.viewpagerList.length * 1920+'px'
+                this.go()
+                // this.kuang()
+                
+            },
+        })
+    </script>
+</body>
+
+</html>
