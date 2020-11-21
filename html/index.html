@@ -34,6 +34,7 @@
                         <img src="../images/26d0eb2c-283a-4c7c-a9ba-4a1002271e36.png" alt="华为专区">
                     </a>
                 </div>
+                <!--中间导航栏-->
                 <div class="z-middle">
                     <ul class="z-middle-nav">
                         <li class="nav-li">
@@ -57,6 +58,7 @@
                         <li><a href="#"><span>企业购</span></a></li>
                     </ul>
                 </div>
+                <!--搜索框-->
                 <div class="z-right clear">
                     <div class="pos">
                         <input type="search">
@@ -70,7 +72,7 @@
                 </div>
             </div>
         </div>
-
+        <!--轮播图-->
         <div class="hd-middle clear">
             <div id="viewpager" class="host" style="height: 600px;">
                 <div ref="z" class="guest">
@@ -349,7 +351,9 @@
     <script>
         var lunbo = new Vue({
             el: '#viewpager',
+           
             data: {
+                 //图片列表
                 viewpagerList: [
                     "../images/20cbe424-1dae-4e83-814d-7fd90fef923e.jpg",
                     "../images/2fe5886e-1011-4c92-b398-f3d1ac007b02.jpg",
@@ -360,7 +364,9 @@
                 ],
                 n: 0,
                 viewpagerInter: null,
+                //图片样式设置
                 s: null,
+                //图片X轴位移距离
                 l: [
                     { transform: 'translateX(0px)', transition: 'all 3s ease-out' },
                     { transform: 'translateX(-1920px)', transition: 'all 3s ease-out' },
@@ -371,6 +377,7 @@
                 ]
             },
             methods: {
+                //轮播循环开始
                 go() {
                     this.viewpagerInder = setInterval(() => {
                         this.n++
@@ -381,9 +388,11 @@
 
                     }, 5000);
                 },
+                //鼠标位于图片范围轮播暂停
                 clearGo() {
                     clearInterval(this.viewpagerInder)
                 },
+                //鼠标位于li中时轮播暂停
                 clearLiGo(i) {
                     this.n = i,
                         this.s = this.l[i]
@@ -401,6 +410,7 @@
             //     // }
 
             // },
+            //开始初始化
             mounted() {
                 this.$refs.z.style.width = this.viewpagerList.length * 1920 + 'px'
                 this.go()
